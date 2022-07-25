@@ -9,7 +9,9 @@
   "keywords": [
     "react",
     "typescript",
-    "vite"
+    "vite",
+    "styled-components",
+    "react-icons"
   ],
   "bugs": {
     "url": "https://github.com/JefersonLucas/deck-of-random-cards/issues"
@@ -27,6 +29,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
