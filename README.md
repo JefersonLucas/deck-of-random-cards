@@ -24,15 +24,23 @@ npm run dev
 yarn run dev
 ```
 
+## Deploy
+
+See the deployment of the application by [netlify](https://62dea41637f013293e6b511c--eclectic-trifle-24eaa0.netlify.app/).
+
 ## Stacks
 
 This project is configured with the following stacks:
 
-- Yarn: `1.22.5`
-- Typescript: `4.6.4`
+- Git: `2.28.0`
+- Git Flow: `1.12.3`
+- Node: `16.13.2`
 - React: `18.2.0`
-- Vite: `3.0.0`
+- React icons: `4.4.0`
 - Styled-components: `5.3.5`
+- Typescript: `4.6.4`
+- Vite: `3.0.0`
+- Yarn: `1.22.5`
 
 For more information check the [package.json](package.json) file of this project.
 

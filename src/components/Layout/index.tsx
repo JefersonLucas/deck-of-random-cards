@@ -1,10 +1,13 @@
-import Title from "../Title";
+import { Container } from "./styles";
+import Menu from "../Menu";
+import Content from "../Content";
 
 const Layout: React.FC = () => {
   return (
-    <>
-      <Title>Deck of random cards</Title>
-    </>
+    <Container>
+      <Menu />
+      <Content />
+    </Container>
   );
 };
 

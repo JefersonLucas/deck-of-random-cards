@@ -2,7 +2,7 @@
   "name": "deck-of-random-cards",
   "description": "A simple deck of random cards",
   "private": false,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "author": "Jeferson Lucas <jeferson.luckas@gmail.com>",
   "license": "MIT",
@@ -10,7 +10,8 @@
     "react",
     "typescript",
     "vite",
-    "styled-components"
+    "styled-components",
+    "react-icons"
   ],
   "bugs": {
     "url": "https://github.com/JefersonLucas/deck-of-random-cards/issues"
@@ -28,6 +29,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
