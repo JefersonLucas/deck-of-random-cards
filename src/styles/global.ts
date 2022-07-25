@@ -12,16 +12,16 @@ export default createGlobalStyle`
   }
  
   #root {
-    max-width: 1280px;
+    /* max-width: 1280px; */
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
     text-align: center;
   }
 
   body {
     margin: 0;
-    display: flex;
-    place-items: center;
+    /* display: flex; */
+    /* place-items: center; */
     min-width: 320px;
     min-height: 100vh;
   }
@@ -34,7 +34,7 @@ export default createGlobalStyle`
     font-size: 18px;
     font-weight: 500;
     font-family: inherit;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.text.white};
     cursor: pointer;
     transition: all 0.25s;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%),
