@@ -32,6 +32,7 @@ This project is configured with the following stacks:
 - Typescript: `4.6.4`
 - React: `18.2.0`
 - Vite: `3.0.0`
+- Styled-components: `5.3.5`
 
 For more information check the [package.json](package.json) file of this project.
 
