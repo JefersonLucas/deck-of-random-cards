@@ -9,7 +9,8 @@
   "keywords": [
     "react",
     "typescript",
-    "vite"
+    "vite",
+    "styled-components"
   ],
   "bugs": {
     "url": "https://github.com/JefersonLucas/deck-of-random-cards/issues"
