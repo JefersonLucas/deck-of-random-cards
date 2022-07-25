@@ -1,10 +1,16 @@
-import "./App.css";
+import { ThemeProvider } from "styled-components";
+
+import GlobalStyle from "./styles/global";
+import light from "./styles/themes/light";
+
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Deck of random cards</h1>
-    </div>
+    <ThemeProvider theme={light}>
+      <GlobalStyle />
+      <Layout />
+    </ThemeProvider>
   );
 }
 
