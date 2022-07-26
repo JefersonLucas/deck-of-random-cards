@@ -8,7 +8,7 @@ const Menu: React.FC = () => {
       <Logo />
       <UserContainer>
         <MdPerson />
-        <Username>Jeferson Luca</Username>
+        <Username>Jeferson Lucas</Username>
       </UserContainer>
     </Container>
   );
