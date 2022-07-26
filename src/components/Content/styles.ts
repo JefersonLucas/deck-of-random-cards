@@ -5,6 +5,8 @@ export const Container = styled.div`
 
   grid-template-columns: auto;
   grid-template-rows: 80px auto;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ButtonsContainer = styled.div`
