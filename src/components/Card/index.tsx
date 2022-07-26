@@ -9,10 +9,13 @@ const Card: React.FC<ICard> = ({ src, name, points, description }) => {
         <RiQuestionMark />
       </div>
       <div className="back">
-        <img src={src} draggable={false} />
+        <img src={src} draggable={false} alt={name} />
         <h3>{name}</h3>
         <strong>{points}</strong>
-        <p>{description}</p>
+        <em>
+          <span>Diet: </span>
+          {description}
+        </em>
       </div>
     </Container>
   );
