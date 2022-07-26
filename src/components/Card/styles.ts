@@ -34,7 +34,7 @@ export const Container = styled.div`
 
   .back {
     display: grid;
-    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
     position: relative;
     gap: 5px;
     background-color: ${({ theme }) => theme.colors.background.secondary};
@@ -47,19 +47,24 @@ export const Container = styled.div`
 
     strong {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 15px;
+      right: 20px;
+      color: ${({ theme }) => theme.colors.text.white};
     }
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 210px;
+      height: 210px;
       border-radius: 10px;
     }
 
-    p {
+    em {
       text-align: left;
       line-height: 16px;
+    }
+
+    span {
+      font-weight: 700;
     }
   }
 
