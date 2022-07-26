@@ -23,5 +23,10 @@ export const Container = styled.button<IButton>`
   &:hover {
     box-shadow: 4px 4px 5px 1px rgb(0 0 0 / 14%);
     opacity: 0.7;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 `;
