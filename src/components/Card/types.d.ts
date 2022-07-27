@@ -1,6 +1,7 @@
 export interface ICard {
   src: string;
   name: string;
-  points: number;
+  points: string;
   description: string;
+  active: boolean;
 }

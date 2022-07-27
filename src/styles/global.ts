@@ -24,4 +24,11 @@ export default createGlobalStyle`
     min-width: 320px;
     min-height: 100vh;
   }
+
+  h3, strong, span, p, em {
+    &::selection {
+      background-color: ${({ theme }) => theme.colors.others.orange};
+      color: ${({ theme }) => theme.colors.text.white};
+    }
+  }
 `;

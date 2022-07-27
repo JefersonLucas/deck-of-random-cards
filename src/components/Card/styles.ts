@@ -1,11 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const shadowdrop = keyframes`
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 115, 187, 0.75);
+  }
+`;
 
 export const Container = styled.div`
+  display: flex;
   width: 250px;
   height: 350px;
   border-radius: 15px;
   perspective: 700px;
-  user-select: none;
+  cursor: info;
 
   .front,
   .back {
@@ -34,7 +44,7 @@ export const Container = styled.div`
 
   .back {
     display: grid;
-    grid-template-rows: 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
     position: relative;
     gap: 5px;
     background-color: ${({ theme }) => theme.colors.background.secondary};
@@ -47,32 +57,37 @@ export const Container = styled.div`
 
     strong {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 15px;
+      right: 20px;
+      color: ${({ theme }) => theme.colors.text.white};
     }
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 210px;
+      height: 210px;
       border-radius: 10px;
     }
 
-    p {
+    em {
       text-align: left;
       line-height: 16px;
     }
+
+    span {
+      font-weight: 700;
+    }
   }
 
-  &:hover .front {
+  .active.front {
     transform: rotateY(180deg);
     z-index: 0;
   }
 
-  &:hover .back {
+  .active.back {
     z-index: 1;
     transform: rotateY(0);
     border: 1px solid ${({ theme }) => theme.colors.others.cyan};
     background-color: ${({ theme }) => theme.colors.background.secondary};
-    box-shadow: 0px 0px 5px 2px rgba(0, 115, 187, 0.75);
+    animation: ${shadowdrop} 0.7s 1s infinite alternate both;
   }
 `;
