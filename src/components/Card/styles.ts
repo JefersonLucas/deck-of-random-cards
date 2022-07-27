@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const shadowdrop = keyframes`
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 115, 187, 0.75);
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -6,6 +15,7 @@ export const Container = styled.div`
   height: 350px;
   border-radius: 15px;
   perspective: 700px;
+  cursor: info;
 
   .front,
   .back {
@@ -78,6 +88,6 @@ export const Container = styled.div`
     transform: rotateY(0);
     border: 1px solid ${({ theme }) => theme.colors.others.cyan};
     background-color: ${({ theme }) => theme.colors.background.secondary};
-    box-shadow: 0px 0px 5px 2px rgba(0, 115, 187, 0.75);
+    animation: ${shadowdrop} 0.7s 1s infinite alternate both;
   }
 `;
