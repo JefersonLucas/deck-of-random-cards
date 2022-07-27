@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import { MdShuffle, MdFlipCameraAndroid } from "react-icons/md";
-import { Container, ButtonsContainer, CardsContainer } from "./styles";
+
 import Button from "../Button";
 import Card from "../Card";
-import { IData } from "../../interfaces/types";
 import getData from "../../helper/getData";
+import randomness from "../../helper/randomness";
+
+import { Container, ButtonsContainer, CardsContainer } from "./styles";
+import { IData } from "../../interfaces/types";
 
 const Content: React.FC = () => {
   const [data, setData] = useState<IData[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [count, setCount] = useState(1);
+  const [random, setRandom] = useState<number>();
+  let [suffle, setSuffle] = useState([1, 2, 3, 4, 5]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -23,6 +29,10 @@ const Content: React.FC = () => {
         setIsLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    if (count > 3) setCount(1);
+  }, [count]);
 
   if (isError) {
     return (
@@ -39,18 +49,33 @@ const Content: React.FC = () => {
       </Container>
     );
   }
+
   return (
     <Container>
       <ButtonsContainer>
-        <Button variant="cyan" onClick={() => console.log("first")}>
+        <Button
+          variant="cyan"
+          disabled={!!(count < 3)}
+          onClick={() => {
+            setCount((count) => (count === 3 ? (count = 0) : (count = count)));
+            setSuffle(randomness(suffle));
+          }}
+        >
           Shuffle <MdShuffle />
         </Button>
-        <Button variant="orange" onClick={() => console.log("second")}>
+        <Button
+          variant="orange"
+          disabled={!!(count === 3)}
+          onClick={() => {
+            setCount((count) => count + 1);
+            setRandom(Math.floor(Math.random() * 5));
+          }}
+        >
           Pull
           <MdFlipCameraAndroid />
         </Button>
       </ButtonsContainer>
-      <CardsContainer>
+      <CardsContainer suffle={suffle}>
         {data.map((item, index) => (
           <Card
             key={item.id}
@@ -58,6 +83,7 @@ const Content: React.FC = () => {
             name={item.name}
             description={item.diet}
             points={(index + 1).toString().padStart(2, "0")}
+            active={!!(index === random)}
           />
         ))}
       </CardsContainer>
