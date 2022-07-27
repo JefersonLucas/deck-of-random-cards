@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { MdShuffle, MdFlipCameraAndroid } from "react-icons/md";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 import Button from "../Button";
 import Card from "../Card";
 import getData from "../../helper/getData";
 import randomness from "../../helper/randomness";
 
-import { Container, ButtonsContainer, CardsContainer } from "./styles";
+import { Container, ButtonsContainer, CardsContainer, Link } from "./styles";
 import { IData } from "../../interfaces/types";
 
 const Content: React.FC = () => {
@@ -19,7 +20,7 @@ const Content: React.FC = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getData(5) // Passing 5 elements
+    getData(5) // Getting 5 elements
       .then((response) => {
         setData(response);
         setIsLoading(false);
@@ -87,6 +88,14 @@ const Content: React.FC = () => {
           />
         ))}
       </CardsContainer>
+      <p>
+        <Link href="https://github.com/JefersonLucas">
+          <AiFillGithub /> JefersonLucas
+        </Link>
+        <Link href="https://www.linkedin.com/in/jeferson-lucas/">
+          <AiFillLinkedin /> Jeferson Lucas
+        </Link>
+      </p>
     </Container>
   );
 };

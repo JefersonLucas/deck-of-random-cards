@@ -46,3 +46,15 @@ export const CardsContainer = styled.div<Suffle>`
     order: ${({ suffle }) => suffle[4]};
   }
 `;
+
+export const Link = styled.a.attrs(() => ({
+  target: "_blank",
+}))`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
+  color: ${({ theme }) => theme.colors.others.orange};
+  text-decoration: none;
+`;
