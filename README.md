@@ -1,5 +1,20 @@
 # Deck of random cards
 
+![Deck of random cards](https://img.shields.io/badge/JefersonLucas-%20Deck%20of%20random%20cards-dd6b10)
+![GitHub last commit](https://img.shields.io/github/last-commit/JefersonLucas/js-challenger?style=flat)
+![MIT](https://img.shields.io/github/license/JefersonLucas/js-challenger?style=flat)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/JefersonLucas/deck-of-random-cards)
+
+![React](https://img.shields.io/badge/-React-21262d?fff&style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/-Vite-21262d?fff&style=flat-square&logo=vite)
+![TypeScript](https://img.shields.io/badge/-TypeScript-21262d?fff&style=flat-square&logo=typescript)
+![Styled-components](https://img.shields.io/badge/-Styled%20components-21262d?fff&style=flat-square&logo=styled-components)
+![Git](https://img.shields.io/badge/-Git-21262d?fff&style=flat-square&logo=git)
+![Yarn](https://img.shields.io/badge/-Yarn-21262d?fff&style=flat-square&logo=yarn)
+![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-21262d?fff&style=flat-square&logo=visual-studio-code&logoColor=007ACC)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2708bec8-2f53-4c49-b3b3-8a1b03c43be8/deploy-status)](https://app.netlify.com/sites/deck-of-random-cards/deploys)
+
 ## About
 
 A simple deck of random cards.
@@ -26,7 +41,7 @@ yarn run dev
 
 ## Deploy
 
-See the deployment of the application by [netlify](https://62dea41637f013293e6b511c--eclectic-trifle-24eaa0.netlify.app/).
+See the deployment of the application by [netlify](https://deck-of-random-cards.netlify.app/).
 
 ## Stacks
 
