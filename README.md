@@ -26,7 +26,7 @@ yarn run dev
 
 ## Deploy
 
-See the deployment of the application by [netlify](https://62dea41637f013293e6b511c--eclectic-trifle-24eaa0.netlify.app/).
+See the deployment of the application by [netlify](https://62df07b6c1cc4e00086baf17--eclectic-trifle-24eaa0.netlify.app/).
 
 ## Stacks
 
