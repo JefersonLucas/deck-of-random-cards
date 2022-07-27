@@ -2,7 +2,7 @@
   "name": "deck-of-random-cards",
   "description": "A simple deck of random cards",
   "private": false,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "author": "Jeferson Lucas <jeferson.luckas@gmail.com>",
   "license": "MIT",
