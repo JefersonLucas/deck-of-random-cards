@@ -29,4 +29,9 @@ export const Container = styled.button<IButton>`
   &:active {
     transform: translateY(0);
   }
+
+  &:disabled {
+    opacity: ${({ disabled }) => (disabled ? "0.5" : "0")};
+    cursor: ${({ disabled }) => (disabled ? "progress" : "pointer")};
+  }
 `;
