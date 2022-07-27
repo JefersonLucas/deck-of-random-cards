@@ -31,7 +31,8 @@ export const Container = styled.button<IButton>`
   }
 
   &:disabled {
+    transform: translateY(0);
     opacity: ${({ disabled }) => (disabled ? "0.5" : "0")};
-    cursor: ${({ disabled }) => (disabled ? "progress" : "pointer")};
+    cursor: ${({ disabled }) => (disabled ? "no-drop" : "pointer")};
   }
 `;
