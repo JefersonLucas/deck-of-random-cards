@@ -3,4 +3,5 @@ export interface ICard {
   name: string;
   points: string;
   description: string;
+  active: boolean;
 }

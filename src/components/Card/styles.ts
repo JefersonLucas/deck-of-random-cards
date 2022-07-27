@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
   width: 250px;
   height: 350px;
   border-radius: 15px;
   perspective: 700px;
-  user-select: none;
 
   .front,
   .back {
@@ -68,12 +68,12 @@ export const Container = styled.div`
     }
   }
 
-  &:hover .front {
+  .active.front {
     transform: rotateY(180deg);
     z-index: 0;
   }
 
-  &:hover .back {
+  .active.back {
     z-index: 1;
     transform: rotateY(0);
     border: 1px solid ${({ theme }) => theme.colors.others.cyan};
