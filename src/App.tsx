@@ -8,22 +8,18 @@ import Layout from "./components/Layout";
 import Form from "./components/Form";
 
 import useModal from "./hooks/useModal";
-import useUsername from "./hooks/useUsername";
 
 function App() {
   const { isModalOpen, toggleModal } = useModal();
-  const { name } = useUsername();
 
   return (
-    <div onLoad={() => !name && toggleModal()}>
-      <ThemeProvider theme={light}>
-        <GlobalStyle />
-        <Layout />
-        <Modal isOpen={isModalOpen} onClose={toggleModal}>
-          <Form toggleModal={toggleModal} />
-        </Modal>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={light}>
+      <GlobalStyle />
+      <Layout />
+      <Modal isOpen={!isModalOpen} onClose={toggleModal}>
+        <Form toggleModal={toggleModal} />
+      </Modal>
+    </ThemeProvider>
   );
 }
 
