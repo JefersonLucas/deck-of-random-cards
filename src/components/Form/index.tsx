@@ -27,6 +27,7 @@ const Form: React.FC<{ toggleModal: () => void }> = ({ toggleModal }) => {
         type="text"
         placeholder="What's your name?"
         required
+        autoFocus
         {...username}
       />
       <Button type="submit" variant="cyan" disabled={username.value === ""}>
