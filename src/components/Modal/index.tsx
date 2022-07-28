@@ -15,6 +15,8 @@ const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose, children }) => {
     <Container>
       <Overlay
         // ref={overlayRef}
+        // This ref references the overlay of the modal
+        // uncommenting it can click outside that exits the modal.
         onClick={handleOverlayClick}
       />
       <Box>
