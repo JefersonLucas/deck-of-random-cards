@@ -14,6 +14,7 @@ export default {
     others: {
       cyan: "#0073bb",
       orange: "#dd6b10",
+      red: "#e44c4e",
     },
   },
 };

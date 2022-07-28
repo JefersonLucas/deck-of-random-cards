@@ -14,7 +14,7 @@ const Content: React.FC = () => {
   const [data, setData] = useState<IData[]>([]);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
   const [random, setRandom] = useState<number>();
   let [suffle, setSuffle] = useState([1, 2, 3, 4, 5]);
 
