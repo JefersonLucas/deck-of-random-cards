@@ -5,14 +5,14 @@ type Children = {
 };
 
 export type Username = {
-  name: string | undefined;
-  setName: Dispatch<React.SetStateAction<string | undefined>>;
+  name: string;
+  setName: Dispatch<React.SetStateAction<string>>;
 };
 
 const UsernameContext = createContext<Username>({} as Username);
 
 const UsernameProvider: React.FC<Children> = ({ children }) => {
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
 
   return (
     <UsernameContext.Provider value={{ name, setName }}>
